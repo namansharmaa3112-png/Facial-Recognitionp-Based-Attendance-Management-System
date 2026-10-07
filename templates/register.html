@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register Student</title>
+</head>
+<body>
+    <h2>Student Registration</h2>
+
+    {% with messages = get_flashed_messages() %}
+      {% for msg in messages %}
+        <p style="color:green">{{ msg }}</p>
+      {% endfor %}
+    {% endwith %}
+
+    <form method="post">
+        Roll No: <input type="text" name="roll" required><br><br>
+        Name: <input type="text" name="name" required><br><br>
+        Course: <input type="text" name="course" required><br><br>
+        Year: <input type="text" name="year" required><br><br>
+        Semester: <input type="text" name="semester" required><br><br>
+        Subject: <input type="text" name="subject" required><br><br>
+
+        <button type="submit">Register & Capture Face</button>
+    </form>
+
+    <br>
+    <a href="/dashboard">Back</a>
+</body>
+</html>
